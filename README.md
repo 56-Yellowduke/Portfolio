@@ -5,7 +5,7 @@ A static site (no build step, no dependencies) — just `index.html`, `style.css
 
 ## What's already done
 - Full site built from your Figma design: hero, About Me, Projects (Design + Python), Contact.
-- All 5 Python projects included, plus Plan Ahead and Opay Redesign, and more to come.
+- All 7 Python projects included, plus Plan Ahead and Opay Redesign, and more to come.
 - Staggered fade/slide-in animation on scroll (matches the entrance animation from Figma), and it's
   disabled automatically for anyone with reduced-motion turned on.
 - Mobile-responsive nav and layout.
