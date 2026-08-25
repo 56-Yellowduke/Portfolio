@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yellow-duke — Procurement Data Consultant & UI/UX Designer</title>
+<meta name="description" content="Portfolio of Yellow-duke (Duke) — Procurement Data Consultant & UI/UX Designer, building toward AI/ML and backend development.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jersey+20&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="nav" id="top">
+  <div class="nav__inner">
+    <a class="nav__logo" href="#top">
+      <svg class="nav__mark" viewBox="0 0 40 40" aria-hidden="true">
+        <path d="M6 4 L20 22 M20 22 L34 4 M20 22 L20 36" stroke="currentColor" stroke-width="3" fill="none" stroke-linecap="round"/>
+      </svg>
+      Yellow-duke
+    </a>
+    <nav class="nav__links" aria-label="Primary">
+      <a href="#about">About Me</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact" class="nav__cta">Contact Me</a>
+    </nav>
+    <button class="nav__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <nav class="nav__mobile" id="navMobile" aria-label="Mobile">
+    <a href="#about">About Me</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact Me</a>
+  </nav>
+</header>
+
+<main id="main">
+
+  <!-- HERO -->
+  <section class="hero" id="top">
+    <div class="hero__inner">
+      <div class="hero__text reveal" style="--i:0">
+        <span class="tag">Portfolio</span>
+        <h1 class="hero__title">Yellow-duke</h1>
+        <p class="hero__role">Procurement Data Consultant &amp; UI/UX Designer</p>
+        <p class="hero__sub">Building toward AI/ML and backend development — bringing a systems-thinker's eye to both data and design.</p>
+        <div class="hero__actions">
+          <a href="#projects" class="btn btn--primary">View Projects</a>
+          <a href="#contact" class="btn btn--ghost">Contact Me</a>
+        </div>
+      </div>
+      <div class="hero__portrait reveal" style="--i:1">
+        <img src="assets/portrait.png" alt="Portrait of Duke" onerror="this.closest('.hero__portrait').classList.add('portrait--empty')">
+        <div class="portrait__placeholder">
+          <p>Add your portrait</p>
+          <span>assets/portrait.png</span>
+        </div>
+      </div>
+    </div>
+    <div class="sort-strip" aria-hidden="true">
+      <span class="sort-block" style="--j:0; --sr:-16deg; --sx:-22px; --sy:14px;"></span>
+      <span class="sort-block" style="--j:1; --sr:11deg; --sx:16px; --sy:-10px;"></span>
+      <span class="sort-block sort-block--key" style="--j:2; --sr:-9deg; --sx:-12px; --sy:18px;"></span>
+      <span class="sort-block" style="--j:3; --sr:14deg; --sx:20px; --sy:-6px;"></span>
+      <span class="sort-block" style="--j:4; --sr:-13deg; --sx:-18px; --sy:-14px;"></span>
+      <span class="sort-block sort-block--key" style="--j:5; --sr:10deg; --sx:14px; --sy:12px;"></span>
+      <span class="sort-block" style="--j:6; --sr:-11deg; --sx:-10px; --sy:-8px;"></span>
+      <span class="sort-block" style="--j:7; --sr:15deg; --sx:24px; --sy:10px;"></span>
+    </div>
+    <p class="sort-caption">messy records → clean structure</p>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="section__inner">
+      <h2 class="section__heading reveal" style="--i:0">Who am I?</h2>
+      <p class="about__bio reveal" style="--i:1">
+        I'm a Procurement Data Consultant &amp; UI/UX Designer, building toward AI/ML and backend development.
+        I bring a systems-thinker's eye to both data and design. On the data side, I restructure procurement
+        and inventory systems, turning messy records into clean, usable structure. On the design side, I've
+        designed apps like <strong>Plan Ahead</strong> and led a redesign project for <strong>Opay</strong> —
+        work built in Figma with a focus on clean, intuitive, user-centered experiences. I'm self-taught in
+        Python (OOP, data fundamentals, real projects on GitHub), HackerRank-certified, and always building.
+        I believe good systems — and good design — solve real problems.
+      </p>
+      <ul class="chip-row" aria-label="Skills and tools">
+        <li class="chip reveal" style="--i:2">Python</li>
+        <li class="chip reveal" style="--i:3">OOP</li>
+        <li class="chip reveal" style="--i:4">Data &amp; Procurement Systems</li>
+        <li class="chip reveal" style="--i:5">Figma / UI-UX</li>
+        <li class="chip reveal" style="--i:6">HackerRank Certified</li>
+        <li class="chip reveal" style="--i:7">GitHub</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="projects" id="projects">
+    <div class="section__inner">
+      <h2 class="section__heading reveal" style="--i:0">Design Work</h2>
+      <div class="card-grid">
+        <article class="card reveal" style="--i:1">
+          <span class="card__tag">UI / UX Design</span>
+          <h3>Plan Ahead</h3>
+          <p>A mobile planning app designed in Figma, focused on clean information hierarchy and an
+             intuitive, user-centered flow from browsing to booking.</p>
+        </article>
+        <article class="card reveal" style="--i:2">
+          <span class="card__tag">Redesign</span>
+          <h3>Opay Redesign</h3>
+          <p>A redesign exploration of the Opay mobile banking experience — rethinking layout, contrast,
+             and visual clarity around everyday transactions.</p>
+        </article>
+      </div>
+
+      <h2 class="section__heading reveal" style="--i:0">Python Projects</h2>
+      <div class="card-grid">
+        <article class="card reveal" style="--i:1">
+          <span class="card__tag">Python · OOP</span>
+          <h3>Student Management System</h3>
+          <p>A record-keeping tool for managing student data, built around OOP principles with structured
+             classes for adding, updating, and querying records.</p>
+          <a class="card__link" href="https://github.com/56-Yellowduke/Python-projects/blob/main/student_management_oop.py" target="_blank" rel="noopener">View on GitHub →</a>
+        </article>
+        <article class="card reveal" style="--i:2">
+          <span class="card__tag">Python</span>
+          <h3>Student Management System (Script Version)</h3>
+          <p>An earlier, procedural take on the same student record-keeping tool — built before the OOP
+             refactor, useful as a before/after comparison of the same problem.</p>
+          <a class="card__link" href="https://github.com/56-Yellowduke/Python-projects/blob/main/students_management.py" target="_blank" rel="noopener">View on GitHub →</a>
+        </article>
+        <article class="card reveal" style="--i:3">
+          <span class="card__tag">Python</span>
+          <h3>Contact Book</h3>
+          <p>A command-line contact manager for storing, searching, and organizing contact records —
+             practicing core data structures and file handling.</p>
+          <a class="card__link" href="https://github.com/56-Yellowduke/Python-projects/blob/main/contact_book.py" target="_blank" rel="noopener">View on GitHub →</a>
+        </article>
+        <article class="card reveal" style="--i:4">
+          <span class="card__tag">Python</span>
+          <h3>Product Inventory System</h3>
+          <p>An inventory-tracking tool that mirrors real procurement work — structuring product records
+             so stock, pricing, and quantity stay clean and queryable.</p>
+          <a class="card__link" href="https://github.com/56-Yellowduke/Python-projects/blob/main/product_inventory.py" target="_blank" rel="noopener">View on GitHub →</a>
+        </article>
+        <article class="card reveal" style="--i:5">
+          <span class="card__tag">Python · API</span>
+          <h3>Weather App</h3>
+          <p>A weather-lookup tool that pulls live data through a public API, covering request handling,
+             parsing, and displaying results back to the user.</p>
+          <a class="card__link" href="https://github.com/56-Yellowduke/Python-projects/blob/main/weather_app.py" target="_blank" rel="noopener">View on GitHub →</a>
+        </article>
+        <article class="card reveal" style="--i:6">
+          <span class="card__tag">Python</span>
+          <h3>Web Scraper</h3>
+          <p>A script that pulls structured data from web pages — practicing HTTP requests, HTML parsing,
+             and turning raw pages into usable data.</p>
+          <a class="card__link" href="https://github.com/56-Yellowduke/Python-projects/blob/main/web_scraper.py" target="_blank" rel="noopener">View on GitHub →</a>
+        </article>
+        <article class="card reveal" style="--i:7">
+          <span class="card__tag">Python</span>
+          <h3>Quiz Game</h3>
+          <p>An interactive command-line quiz — handling question flow, scoring, and user input validation.</p>
+          <a class="card__link" href="https://github.com/56-Yellowduke/Python-projects/blob/main/quiz_game.py" target="_blank" rel="noopener">View on GitHub →</a>
+        </article>
+      </div>
+
+      <h2 class="section__heading reveal" style="--i:0">Machine Learning Projects</h2>
+      <div class="card-grid">
+        <article class="card reveal" style="--i:1">
+          <span class="card__tag">Python · Machine Learning</span>
+          <h3>House Price Predictor</h3>
+          <p>A linear regression model built with scikit-learn, predicting house prices from size — plotted
+             against actual data with matplotlib. First step into the ML side of the Python track.</p>
+          <a class="card__link" href="https://github.com/56-Yellowduke/Python-projects/blob/main/house_price_predictor.py" target="_blank" rel="noopener">View on GitHub →</a>
+        </article>
+        <article class="card reveal" style="--i:2">
+          <span class="card__tag">Python · Machine Learning</span>
+          <h3>Customer Classifier</h3>
+          <p>A decision tree model built with scikit-learn, predicting customer purchase likelihood from age
+             and income — evaluated with a train/test split and accuracy scoring.</p>
+          <a class="card__link" href="https://github.com/56-Yellowduke/Python-projects/blob/main/customer_classifier.py" target="_blank" rel="noopener">View on GitHub →</a>
+        </article>
+      </div>
+
+      <h2 class="section__heading reveal" style="--i:0">SQL Projects</h2>
+      <div class="card-grid">
+        <article class="card reveal" style="--i:1">
+          <span class="card__tag">Python · SQL</span>
+          <h3>Student Management System (SQL Edition)</h3>
+          <p>A command-line student management system backed by a real SQLite database — full CRUD via SQL
+             queries, plus a class-average report generated straight from the stored records.</p>
+          <a class="card__link" href="https://github.com/56-Yellowduke/Python-projects/blob/main/Student%20Management%20SQL.py" target="_blank" rel="noopener">View on GitHub →</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="section__inner contact__inner">
+      <div class="reveal" style="--i:0">
+        <h2 class="section__heading">Contact me</h2>
+        <p class="contact__sub">Have a question, an opportunity, or just want to talk shop? Reach out.</p>
+      </div>
+      <div class="contact__card reveal" style="--i:1">
+        <a class="contact__row" href="mailto:dukeyellowduke555@gmail.com">
+          <span class="contact__icon" aria-hidden="true">✉</span>
+          <span>dukeyellowduke555@gmail.com</span>
+        </a>
+        <a class="contact__row" href="tel:+2348137087616">
+          <span class="contact__icon" aria-hidden="true">☎</span>
+          <span>+234 813 708 7616</span>
+        </a>
+        <a class="contact__row" href="https://github.com/56-Yellowduke/Python-projects" target="_blank" rel="noopener">
+          <span class="contact__icon" aria-hidden="true">⌥</span>
+          <span>github.com/56-Yellowduke</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <p>© <span id="year"></span> Yellow-duke. Built from a Figma design, shipped as a real site.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
