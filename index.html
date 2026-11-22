@@ -3,243 +3,191 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Yellow-duke — Procurement Data Consultant & UI/UX Designer</title>
-<meta name="description" content="Portfolio of Yellow-duke (Duke) — Procurement Data Consultant & UI/UX Designer, building toward AI/ML and backend development.">
+<title>Yellow-duke | Procurement Data Consultant &amp; UI/UX Designer</title>
+<meta name="description" content="Portfolio of Duke Offiong Yellow-duke: procurement data consultant and UI/UX designer in Nigeria, building toward AI/ML and backend development.">
+<meta name="theme-color" content="#eceeec">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Jersey+20&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
+<div class="progress" id="progress" aria-hidden="true"></div>
 <a class="skip-link" href="#main">Skip to content</a>
 
-<header class="nav" id="top">
-  <div class="nav__inner">
-    <a class="nav__logo" href="#top">
-      <svg class="nav__mark" viewBox="0 0 40 40" aria-hidden="true">
-        <path d="M6 4 L20 22 M20 22 L34 4 M20 22 L20 36" stroke="currentColor" stroke-width="3" fill="none" stroke-linecap="round"/>
-      </svg>
-      Yellow-duke
-    </a>
-    <nav class="nav__links" aria-label="Primary">
-      <a href="#about">About Me</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact" class="nav__cta">Contact Me</a>
-    </nav>
-    <button class="nav__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
-  <nav class="nav__mobile" id="navMobile" aria-label="Mobile">
-    <a href="#about">About Me</a>
+<header class="nav">
+  <nav class="nav__pill" aria-label="Primary">
+    <a href="#top" class="nav__home">Yellow-duke</a>
+    <a href="#about">About</a>
+    <a href="#achievements">Proof</a>
+    <a href="#skills">Skills</a>
     <a href="#projects">Projects</a>
-    <a href="#contact">Contact Me</a>
+    <a href="#contact" class="nav__cta">Contact</a>
   </nav>
+  <button class="nav__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navMobile"><span></span><span></span></button>
 </header>
+<nav class="nav__mobile" id="navMobile" aria-label="Mobile">
+  <a href="#about">About</a><a href="#achievements">Proof</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#contact">Contact</a>
+</nav>
 
 <main id="main">
 
-  <!-- HERO -->
-  <section class="hero" id="top">
-    <div class="hero__inner">
-      <div class="hero__text reveal" style="--i:0">
-        <span class="tag">Portfolio</span>
-        <h1 class="hero__title">Yellow-duke</h1>
-        <p class="hero__role">Procurement Data Consultant &amp; UI/UX Designer</p>
-        <p class="hero__sub">Building toward AI/ML and backend development — bringing a systems-thinker's eye to both data and design.</p>
-        <div class="hero__actions">
-          <a href="#projects" class="btn btn--primary">View Projects</a>
-          <a href="#contact" class="btn btn--ghost">Contact Me</a>
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="hero__name">
+    <h1 id="heroTitle" aria-label="Duke Yellow-duke"><span class="ln"><span>Duke</span></span><span class="ln"><span>Yellow-</span></span><span class="ln"><span>duke</span></span></h1>
+    <ul class="hero__roles">
+      <li>Procurement data consultant</li>
+      <li>UI/UX designer</li>
+      <li>Building toward AI &amp; backend</li>
+    </ul>
+    <p class="hero__line">I make messy systems make sense.</p>
+  </div>
+
+  <div class="hero__stage" id="stage" aria-hidden="false">
+    <div class="figure" id="figure">
+      <img class="figure__base" src="assets/portrait-cutout.png" alt="Illustrated portrait of Duke">
+    </div>
+    <canvas class="gl" id="gl" aria-hidden="true"></canvas>
+    <p class="hero__cap">Real-time 3D: a chrome relief of my portrait and a procedural snake, built with Three.js.</p>
+  </div>
+
+  <a class="hero__scroll" href="#about"><span class="ring"></span><span>Scroll<br>to explore</span></a>
+</section>
+
+<!-- ABOUT -->
+<section class="sec sec--dark" id="about">
+  <div class="wrap">
+    <h2 class="big">About</h2>
+    <div class="about tilt3d">
+      <div class="about__txt">
+        <p>I'm a procurement data consultant and UI/UX designer building toward AI/ML and backend development. On the data side, I restructure procurement and inventory systems and turn messy records into something people can use. On the design side, I designed Plan Ahead and did a redesign project for Opay, both in Figma.</p>
+        <p>I taught myself Python from scratch, I hold a HackerRank Python (Basic) certificate, and I keep building. I believe good systems and good design solve the same problem: making things easy to trust.</p>
+      </div>
+      <div class="ledger" id="ledger" aria-labelledby="ledgerCap">
+        <div class="ledger__bar" aria-hidden="true"><i></i><i></i><i></i><span>suppliers.csv</span></div>
+        <div class="ledger__head" aria-hidden="true"><span>Supplier</span><span>Category</span><span></span></div>
+        <ul class="ledger__body" id="ledgerBody" style="--rows:6"></ul>
+        <div class="ledger__foot"><span id="ledgerStatus" role="status" aria-live="polite">6 rows</span><button type="button" class="link-btn" id="ledgerReplay">Run again</button></div>
+        <p id="ledgerCap" class="ledger__cap">Illustrative supplier data. This is the clean-up I do on real procurement databases: standardise the entries, merge the duplicates, sort what is left.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ACHIEVEMENTS -->
+<section class="sec" id="achievements">
+  <div class="wrap">
+    <h2 class="big">Proof</h2>
+    <div class="tiles">
+      <article class="tile tilt3d tile--y"><b data-count="1000" data-suffix="+">0</b><h3>Records per engagement</h3><p>Supplier and inventory records restructured and cleaned for procurement teams.</p></article>
+      <article class="tile tilt3d tile--b"><b data-count="4">0</b><h3>Companies supported</h3><p>Coreatlas, Oak Scientific, Marina Line and Halo Medicals.</p></article>
+      <article class="tile tilt3d"><b>PY</b><h3>HackerRank certified</h3><p>Python (Basic) certificate. <a href="https://www.hackerrank.com/certificates/d0015caa7acc" target="_blank" rel="noopener">View certificate ↗</a></p></article>
+      <article class="tile tilt3d"><b data-count="11">0</b><h3>Code projects</h3><p>Python, SQL, machine learning and a Kaggle analysis, all on GitHub.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section class="sec sec--paper" id="skills">
+  <div class="wrap">
+    <h2 class="big">Skills</h2>
+    <div class="skills">
+      <div class="sk tilt3d"><h3>Data &amp; procurement</h3><ul><li>Database restructuring</li><li>Supplier and inventory records</li><li>Standard operating procedures</li><li>Excel validation and reporting</li></ul></div>
+      <div class="sk tilt3d"><h3>Python, SQL &amp; AI/ML</h3><ul><li>Python: OOP, APIs, web scraping</li><li>Pandas, NumPy, scikit-learn</li><li>SQL with SQLite</li></ul></div>
+      <div class="sk tilt3d"><h3>Design</h3><ul><li>Figma and Canva</li><li>UI/UX and interface prototyping</li><li>Mobile app flows</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section class="sec" id="projects">
+  <div class="wrap">
+    <h2 class="big">Projects</h2>
+
+    <h3 class="group">Design</h3>
+    <article class="feature tilt3d" id="plan-ahead">
+      <div class="feature__head">
+        <span class="badge">Case study · In progress</span>
+        <h3>Plan Ahead</h3>
+        <p class="feature__tag">You show up. We handle the rest.</p>
+      </div>
+      <div class="feature__body">
+        <div>
+          <p>Plan Ahead is a marketplace that connects event owners, called Hosts, with event planners. A Host browses planners and their past work, books and pays inside the app, and the planner handles everything so the Host only has to turn up as a guest.</p>
+          <p>It covers every kind of event, from birthdays to corporate events and burials. One app, two account types: Host and planner. I'm building it as a clickable, mobile-style web app, with real sign-up and saved bookings and chats next.</p>
+          <ol class="steps">
+            <li><b>Browse</b> Pick a category such as birthday and see event photos from different planners, with prices. Planners near you show first.</li>
+            <li><b>Check the work</b> Open an event to see more photos, a description of how it went, and reviews.</li>
+            <li><b>Talk it through</b> Discuss details in the in-app chat before you book, so there's a record if anything is disputed.</li>
+            <li><b>Book and pay</b> The app holds your payment. Part goes to the planner upfront as a deposit, the rest is released after you confirm the event happened.</li>
+          </ol>
+        </div>
+        <div class="phones">
+          <figure class="phone"><div class="phone__screen"><img src="assets/plan-ahead-browse.png" alt="Plan Ahead screen: browsing event photos and prices from different planners" onerror="this.parentElement.classList.add('is-empty')"><p class="phone__empty">Add your screen<br><code>assets/plan-ahead-browse.png</code></p></div></figure>
+          <figure class="phone"><div class="phone__screen"><img src="assets/plan-ahead-event.png" alt="Plan Ahead screen: an event page with photos, a description and reviews" onerror="this.parentElement.classList.add('is-empty')"><p class="phone__empty">Add your screen<br><code>assets/plan-ahead-event.png</code></p></div></figure>
+          <figure class="phone"><div class="phone__screen"><img src="assets/plan-ahead-booking.png" alt="Plan Ahead screen: in-app chat and booking with a planner" onerror="this.parentElement.classList.add('is-empty')"><p class="phone__empty">Add your screen<br><code>assets/plan-ahead-booking.png</code></p></div></figure>
         </div>
       </div>
-      <div class="hero__portrait reveal" style="--i:1">
-        <img src="assets/portrait.png" alt="Portrait of Duke" onerror="this.closest('.hero__portrait').classList.add('portrait--empty')">
-        <div class="portrait__placeholder">
-          <p>Add your portrait</p>
-          <span>assets/portrait.png</span>
+      <dl class="rules">
+        <div><dt>Planners are verified</dt><dd>An ID-verified badge, reviews only from real bookings, stats like events completed and response time, and photos tied to actual bookings.</dd></div>
+        <div><dt>No contact details in chat</dt><dd>Sharing phone numbers or other contact details is prohibited. Offenders get a strike.</dd></div>
+        <div><dt>Blocking has a cooling-off period</dt><dd>You can't block a profile for at least three months after finishing a deal. Reporting is always available, and the app can block for confirmed harassment.</dd></div>
+        <div><dt>One cancellation policy</dt><dd>A single policy for everyone, so it doesn't change from planner to planner.</dd></div>
+      </dl>
+      <p class="why"><b>Why deep green and gold.</b> Purple and gold looked like Pi. Yellow and charcoal looked like a crypto app. Deep green with a warm gold accent was the one that looked like Plan Ahead and nothing else.</p>
+    </article>
+
+    <article class="feature feature--sm tilt3d">
+      <div class="feature__head"><span class="badge">Redesign</span><h3>Opay redesign</h3></div>
+      <div class="feature__body feature__body--sm">
+        <p>A redesign exploration of the Opay mobile banking experience, rethinking layout, contrast and visual clarity around everyday transactions.</p>
+        <div class="phones phones--two">
+          <figure class="phone"><div class="phone__screen"><img src="assets/opay-1.png" alt="Opay redesign screen" onerror="this.parentElement.classList.add('is-empty')"><p class="phone__empty">Add your screen<br><code>assets/opay-1.png</code></p></div></figure>
+          <figure class="phone"><div class="phone__screen"><img src="assets/opay-2.png" alt="Opay redesign screen" onerror="this.parentElement.classList.add('is-empty')"><p class="phone__empty">Add your screen<br><code>assets/opay-2.png</code></p></div></figure>
         </div>
       </div>
+    </article>
+
+    <h3 class="group">Code</h3>
+    <div class="filters" role="group" aria-label="Filter code projects">
+      <button type="button" class="chip" data-filter="all" aria-pressed="true">All <em></em></button>
+      <button type="button" class="chip" data-filter="python" aria-pressed="false">Python <em></em></button>
+      <button type="button" class="chip" data-filter="ml" aria-pressed="false">Machine learning <em></em></button>
+      <button type="button" class="chip" data-filter="sql" aria-pressed="false">SQL <em></em></button>
+      <button type="button" class="chip" data-filter="analysis" aria-pressed="false">Data analysis <em></em></button>
     </div>
-    <div class="sort-strip" aria-hidden="true">
-      <span class="sort-block" style="--j:0; --sr:-16deg; --sx:-22px; --sy:14px;"></span>
-      <span class="sort-block" style="--j:1; --sr:11deg; --sx:16px; --sy:-10px;"></span>
-      <span class="sort-block sort-block--key" style="--j:2; --sr:-9deg; --sx:-12px; --sy:18px;"></span>
-      <span class="sort-block" style="--j:3; --sr:14deg; --sx:20px; --sy:-6px;"></span>
-      <span class="sort-block" style="--j:4; --sr:-13deg; --sx:-18px; --sy:-14px;"></span>
-      <span class="sort-block sort-block--key" style="--j:5; --sr:10deg; --sx:14px; --sy:12px;"></span>
-      <span class="sort-block" style="--j:6; --sr:-11deg; --sx:-10px; --sy:-8px;"></span>
-      <span class="sort-block" style="--j:7; --sr:15deg; --sx:24px; --sy:10px;"></span>
-    </div>
-    <p class="sort-caption">messy records → clean structure</p>
-  </section>
+    <ul class="pgrid" id="pgrid">
+      <li class="card tilt3d" data-cat="ml" style="--a:#2f5bff"><div class="card__art" aria-hidden="true">ML</div><h4>Customer Classifier</h4><p>A decision tree built with scikit-learn that predicts whether a customer will buy from age and income, checked with a train/test split and an accuracy score.</p><a href="https://github.com/56-Yellowduke/Python-projects/blob/main/customer_classifier.py" target="_blank" rel="noopener" aria-label="View Customer Classifier on GitHub">customer_classifier.py ↗</a></li>
+      <li class="card tilt3d" data-cat="ml" style="--a:#2f5bff"><div class="card__art" aria-hidden="true">ML</div><h4>House Price Predictor</h4><p>A linear regression model that predicts house prices from size, plotted against the real data with Matplotlib. My first step into the ML side.</p><a href="https://github.com/56-Yellowduke/Python-projects/blob/main/house_price_predictor.py" target="_blank" rel="noopener" aria-label="View House Price Predictor on GitHub">house_price_predictor.py ↗</a></li>
+      <li class="card tilt3d" data-cat="analysis" style="--a:#12a36a"><div class="card__art" aria-hidden="true">KG</div><h4>FIFA World Cup 2026 Player Analysis</h4><p>An analysis of a Kaggle dataset of player performance with Pandas and Matplotlib, plus a regression model that predicts player rating from goals, assists and other stats.</p><a href="https://github.com/56-Yellowduke/Python-projects/blob/main/fifa_analysis.py" target="_blank" rel="noopener" aria-label="View FIFA analysis on GitHub">fifa_analysis.py ↗</a></li>
+      <li class="card tilt3d" data-cat="sql" style="--a:#e5484d"><div class="card__art" aria-hidden="true">SQL</div><h4>Student Management System (SQL edition)</h4><p>The same student records tool, now backed by a real SQLite database: full create, read, update and delete with SQL queries, and a class-average report.</p><a href="https://github.com/56-Yellowduke/Python-projects/blob/main/Student%20Management%20SQL.py" target="_blank" rel="noopener" aria-label="View Student Management SQL edition on GitHub">Student Management SQL.py ↗</a></li>
+      <li class="card tilt3d" data-cat="python" style="--a:#ffb800"><div class="card__art" aria-hidden="true">PY</div><h4>Product Inventory System</h4><p>An inventory tracker that mirrors real procurement work: product records with stock, pricing and quantity kept clean and easy to query.</p><a href="https://github.com/56-Yellowduke/Python-projects/blob/main/product_inventory.py" target="_blank" rel="noopener" aria-label="View Product Inventory System on GitHub">product_inventory.py ↗</a></li>
+      <li class="card tilt3d" data-cat="python" style="--a:#ffb800"><div class="card__art" aria-hidden="true">PY</div><h4>Weather App</h4><p>Pulls live weather for any city from a public API and handles bad city names and connection problems.</p><a href="https://github.com/56-Yellowduke/Python-projects/blob/main/weather_app.py" target="_blank" rel="noopener" aria-label="View Weather App on GitHub">weather_app.py ↗</a></li>
+      <li class="card tilt3d" data-cat="python" style="--a:#ffb800"><div class="card__art" aria-hidden="true">PY</div><h4>Web Scraper</h4><p>Collects book titles, prices and ratings from a live site with requests and BeautifulSoup, cleans them and exports a CSV.</p><a href="https://github.com/56-Yellowduke/Python-projects/blob/main/web_scraper.py" target="_blank" rel="noopener" aria-label="View Web Scraper on GitHub">web_scraper.py ↗</a></li>
+      <li class="card tilt3d" data-cat="python" style="--a:#ffb800"><div class="card__art" aria-hidden="true">PY</div><h4>Student Management System (OOP)</h4><p>A student records tool built with classes for adding, updating, searching and querying records.</p><a href="https://github.com/56-Yellowduke/Python-projects/blob/main/student_management_oop.py" target="_blank" rel="noopener" aria-label="View Student Management System OOP on GitHub">student_management_oop.py ↗</a></li>
+      <li class="card tilt3d" data-cat="python" style="--a:#ffb800"><div class="card__art" aria-hidden="true">PY</div><h4>Student Management System (script)</h4><p>The earlier, procedural version of the same tool, kept as a before-and-after of the OOP rewrite.</p><a href="https://github.com/56-Yellowduke/Python-projects/blob/main/students_management.py" target="_blank" rel="noopener" aria-label="View Student Management System script version on GitHub">students_management.py ↗</a></li>
+      <li class="card tilt3d" data-cat="python" style="--a:#ffb800"><div class="card__art" aria-hidden="true">PY</div><h4>Contact Book</h4><p>A command-line contact manager: add, view, search and delete, with input validation and error handling.</p><a href="https://github.com/56-Yellowduke/Python-projects/blob/main/contact_book.py" target="_blank" rel="noopener" aria-label="View Contact Book on GitHub">contact_book.py ↗</a></li>
+      <li class="card tilt3d" data-cat="python" style="--a:#ffb800"><div class="card__art" aria-hidden="true">PY</div><h4>Quiz Game</h4><p>A command-line quiz that handles question flow, scoring and bad input, and lets you play again.</p><a href="https://github.com/56-Yellowduke/Python-projects/blob/main/quiz_game.py" target="_blank" rel="noopener" aria-label="View Quiz Game on GitHub">quiz_game.py ↗</a></li>
+    </ul>
+  </div>
+</section>
 
-  <!-- ABOUT -->
-  <section class="about" id="about">
-    <div class="section__inner">
-      <h2 class="section__heading reveal" style="--i:0">Who am I?</h2>
-      <p class="about__bio reveal" style="--i:1">
-        I'm a Procurement Data Consultant &amp; UI/UX Designer, building toward AI/ML and backend development.
-        I bring a systems-thinker's eye to both data and design. On the data side, I restructure procurement
-        and inventory systems, turning messy records into clean, usable structure. On the design side, I've
-        designed apps like <strong>Plan Ahead</strong> and led a redesign project for <strong>Opay</strong> —
-        work built in Figma with a focus on clean, intuitive, user-centered experiences. I'm self-taught in
-        Python (OOP, data fundamentals, real projects on GitHub), HackerRank-certified, and always building.
-        I believe good systems — and good design — solve real problems.
-      </p>
-      <ul class="chip-row" aria-label="Skills and tools">
-        <li class="chip reveal" style="--i:2">Python</li>
-        <li class="chip reveal" style="--i:3">OOP</li>
-        <li class="chip reveal" style="--i:4">Data &amp; Procurement Systems</li>
-        <li class="chip reveal" style="--i:5">Figma / UI-UX</li>
-        <li class="chip reveal" style="--i:6">HackerRank Certified</li>
-        <li class="chip reveal" style="--i:7">GitHub</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- PROJECTS -->
-  <section class="projects" id="projects">
-    <div class="section__inner">
-      <h2 class="section__heading reveal" style="--i:0">Design Work</h2>
-      <div class="card-grid">
-        <article class="card reveal" style="--i:1">
-          <span class="card__tag">UI / UX Design</span>
-          <h3>Plan Ahead</h3>
-          <p>A mobile planning app designed in Figma, focused on clean information hierarchy and an
-             intuitive, user-centered flow from browsing to booking.</p>
-        </article>
-        <article class="card reveal" style="--i:2">
-          <span class="card__tag">Redesign</span>
-          <h3>Opay Redesign</h3>
-          <p>A redesign exploration of the Opay mobile banking experience — rethinking layout, contrast,
-             and visual clarity around everyday transactions.</p>
-        </article>
-      </div>
-
-      <h2 class="section__heading reveal" style="--i:0">Python Projects</h2>
-      <div class="card-grid">
-        <article class="card reveal" style="--i:1">
-          <span class="card__tag">Python · OOP</span>
-          <h3>Student Management System OOP</h3>
-          <p>A record-keeping tool for managing student data, built around OOP principles with structured
-             classes for adding, updating, and querying records.</p>
-          <a class="card__link" href="https://github.com/56-Yellowduke/Python-projects/blob/main/student_management_oop.py" target="_blank" rel="noopener">View on GitHub →</a>
-        </article>
-        <article class="card reveal" style="--i:2">
-          <span class="card__tag">Python</span>
-          <h3>Student Management System (Script Version)</h3>
-          <p>An earlier, procedural take on the same student record-keeping tool — built before the OOP
-             refactor, useful as a before/after comparison of the same problem.</p>
-          <a class="card__link" href="https://github.com/56-Yellowduke/Python-projects/blob/main/students_management.py" target="_blank" rel="noopener">View on GitHub →</a>
-        </article>
-        <article class="card reveal" style="--i:3">
-          <span class="card__tag">Python</span>
-          <h3>Contact Book</h3>
-          <p>A command-line contact manager for storing, searching, and organizing contact records —
-             practicing core data structures and file handling.</p>
-          <a class="card__link" href="https://github.com/56-Yellowduke/Python-projects/blob/main/contact_book.py" target="_blank" rel="noopener">View on GitHub →</a>
-        </article>
-        <article class="card reveal" style="--i:4">
-          <span class="card__tag">Python</span>
-          <h3>Product Inventory System</h3>
-          <p>An inventory-tracking tool that mirrors real procurement work — structuring product records
-             so stock, pricing, and quantity stay clean and queryable.</p>
-          <a class="card__link" href="https://github.com/56-Yellowduke/Python-projects/blob/main/product_inventory.py" target="_blank" rel="noopener">View on GitHub →</a>
-        </article>
-        <article class="card reveal" style="--i:5">
-          <span class="card__tag">Python · API</span>
-          <h3>Weather App</h3>
-          <p>A weather-lookup tool that pulls live data through a public API, covering request handling,
-             parsing, and displaying results back to the user.</p>
-          <a class="card__link" href="https://github.com/56-Yellowduke/Python-projects/blob/main/weather_app.py" target="_blank" rel="noopener">View on GitHub →</a>
-        </article>
-        <article class="card reveal" style="--i:6">
-          <span class="card__tag">Python</span>
-          <h3>Web Scraper</h3>
-          <p>A script that pulls structured data from web pages — practicing HTTP requests, HTML parsing,
-             and turning raw pages into usable data.</p>
-          <a class="card__link" href="https://github.com/56-Yellowduke/Python-projects/blob/main/web_scraper.py" target="_blank" rel="noopener">View on GitHub →</a>
-        </article>
-        <article class="card reveal" style="--i:7">
-          <span class="card__tag">Python</span>
-          <h3>Quiz Game</h3>
-          <p>An interactive command-line quiz — handling question flow, scoring, and user input validation.</p>
-          <a class="card__link" href="https://github.com/56-Yellowduke/Python-projects/blob/main/quiz_game.py" target="_blank" rel="noopener">View on GitHub →</a>
-        </article>
-      </div>
-
-      <h2 class="section__heading reveal" style="--i:0">Machine Learning Projects</h2>
-      <div class="card-grid">
-        <article class="card reveal" style="--i:1">
-          <span class="card__tag">Python · Machine Learning</span>
-          <h3>House Price Predictor</h3>
-          <p>A linear regression model built with scikit-learn, predicting house prices from size — plotted
-             against actual data with matplotlib. First step into the ML side of the Python track.</p>
-          <a class="card__link" href="https://github.com/56-Yellowduke/Python-projects/blob/main/house_price_predictor.py" target="_blank" rel="noopener">View on GitHub →</a>
-        </article>
-        <article class="card reveal" style="--i:2">
-          <span class="card__tag">Python · Machine Learning</span>
-          <h3>Customer Classifier</h3>
-          <p>A decision tree model built with scikit-learn, predicting customer purchase likelihood from age
-             and income — evaluated with a train/test split and accuracy scoring.</p>
-          <a class="card__link" href="https://github.com/56-Yellowduke/Python-projects/blob/main/customer_classifier.py" target="_blank" rel="noopener">View on GitHub →</a>
-        </article>
-      </div>
-
-      <h2 class="section__heading reveal" style="--i:0">SQL Projects</h2>
-      <div class="card-grid">
-        <article class="card reveal" style="--i:1">
-          <span class="card__tag">Python · SQL</span>
-          <h3>Student Management System (SQL Edition)</h3>
-          <p>A command-line student management system backed by a real SQLite database — full CRUD via SQL
-             queries, plus a class-average report generated straight from the stored records.</p>
-          <a class="card__link" href="https://github.com/56-Yellowduke/Python-projects/blob/main/Student%20Management%20SQL.py" target="_blank" rel="noopener">View on GitHub →</a>
-        </article>
-      </div>
-
-      <h2 class="section__heading reveal" style="--i:0">Kaggle Projects</h2>
-      <div class="card-grid">
-        <article class="card reveal" style="--i:1">
-          <span class="card__tag">Python Kaggle Projects</span>
-          <h3>Fifa Analysis</h3>
-          <p>A data science project analyzing FIFA World Cup 2026 player performance data using Python, Pandas, Matplotlib, and Scikit-learn.</p>
-          <a class="card__link" href="https://github.com/56-Yellowduke/Python-projects/blob/main/fifa_analysis.py" target="_blank" rel="noopener">View on GitHub →</a>
-        </article>
-      </div> 
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section class="contact" id="contact">
-    <div class="section__inner contact__inner">
-      <div class="reveal" style="--i:0">
-        <h2 class="section__heading">Contact me</h2>
-        <p class="contact__sub">Have a question, an opportunity, or just want to talk shop? Reach out.</p>
-      </div>
-      <div class="contact__card reveal" style="--i:1">
-        <a class="contact__row" href="mailto:dukeyellowduke555@gmail.com">
-          <span class="contact__icon" aria-hidden="true">✉</span>
-          <span>dukeyellowduke555@gmail.com</span>
-        </a>
-        <a class="contact__row" href="tel:+2348137087616">
-          <span class="contact__icon" aria-hidden="true">☎</span>
-          <span>+234 813 708 7616</span>
-        </a>
-        <a class="contact__row" href="https://github.com/56-Yellowduke/Python-projects" target="_blank" rel="noopener">
-          <span class="contact__icon" aria-hidden="true">⌥</span>
-          <span>github.com/56-Yellowduke</span>
-        </a>
-      </div>
-    </div>
-  </section>
-
+<!-- CONTACT -->
+<section class="sec sec--dark contact" id="contact">
+  <div class="wrap">
+    <h2 class="big">Contact</h2>
+    <p class="contact__lede">Have a role, a project or a question? Email is the fastest way to reach me.</p>
+    <a class="contact__mail" href="mailto:dukeyellowduke555@gmail.com">dukeyellowduke555@gmail.com</a>
+    <ul class="contact__list">
+      <li><a href="tel:+2348137087616">+234 813 708 7616</a></li>
+      <li><a href="https://github.com/56-Yellowduke" target="_blank" rel="noopener">github.com/56-Yellowduke</a></li>
+    </ul>
+  </div>
+</section>
 </main>
-
-<footer class="footer">
-  <p>© <span id="year"></span> Yellow-duke. Built from a Figma design, shipped as a real site.</p>
-</footer>
-
+<footer class="footer"><div class="wrap">© 2026 Duke Offiong Yellow-duke</div></footer>
 <script src="script.js"></script>
+<script src="hero3d.bundle.js"></script>
 </body>
 </html>
